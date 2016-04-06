@@ -1,0 +1,22 @@
+var ioc = {
+	dataSource:{
+		type:"org.logicalcobwebs.proxool.ProxoolDataSource",
+		fields:{
+			driver:"com.mysql.jdbc.Driver",
+			driverUrl:"jdbc:mysql://localhost:3306/project?useUnicode=true&characterEncoding=UTF-8",
+			user:"root",
+			password:"123456"
+		}
+	},
+	dao : {
+		type : "org.nutz.dao.impl.NutDao",
+		args : [{refer:'dataSource'}]
+	},
+	excludeUrl : {  
+	    fields : {  
+	        urls : 'vcode.do;
+	        		Login.do;
+	        		index.do'
+	    }  
+	}  
+}
